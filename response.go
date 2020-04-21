@@ -117,6 +117,10 @@ func isTextMime(kind string) bool {
 		return true
 	}
 
+	if strings.HasSuffix(mt, "+json"){
+		return true
+	}
+
 	switch mt {
 	case "image/svg+xml", "application/json", "application/xml","application/javascript":
 		return true

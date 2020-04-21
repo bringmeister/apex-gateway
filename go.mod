@@ -1,4 +1,4 @@
-module github.com/apex/gateway
+module github.com/matusewicz/apex-gateway
 
 go 1.12
 

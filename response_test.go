@@ -13,6 +13,12 @@ func Test_JSON_isTextMime(t *testing.T) {
 	assert.Equal(t, isTextMime("Application/JSON"), true)
 }
 
+func Test_Custom_JSON_isTextMime(t *testing.T) {
+	assert.Equal(t, isTextMime("application/problem+json"), true)
+	assert.Equal(t, isTextMime("application/problem+json; charset=utf-8"), true)
+	assert.Equal(t, isTextMime("Application/Problem+JSON"), true)
+}
+
 func Test_XML_isTextMime(t *testing.T) {
 	assert.Equal(t, isTextMime("application/xml"), true)
 	assert.Equal(t, isTextMime("application/xml; charset=utf-8"), true)
